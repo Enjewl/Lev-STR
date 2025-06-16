@@ -11,10 +11,10 @@
 #' @param codon_start the codon starting position for matched sequence
 #' @return Dataframe containing useful data including the matched sequence, estimated number of repeats and location of where the error occurred (if any)
 #' @examples
-#' Matched_sequence_df <- repeat_sizer("Example.fastq")
+#' Matched_sequence_df <- repeat_sizer("R/Example.fastq")
 #' @export
 Lev_repeat_sizer <- function(
-    fastq,
+    fastq = NULL,
     left_flank_seq = "CAAGTCCTTC",
     right_flank_seq = "CAACAGCCGCCACCG",
     repeat_unit_seq = "CAG",
@@ -23,6 +23,10 @@ Lev_repeat_sizer <- function(
     interruptions_repeat_no = 2,
     codon_start = 2
 ){
+  if (is.null(fastq)) {
+    warning("fastq file is missing")
+  }
+  else {
   fastq_df <- readFastq(fastq)
 
   repeat_matcher <- function(seq){
@@ -76,4 +80,5 @@ Lev_repeat_sizer <- function(
     transform(Error_in_Repeat = ifelse(longest_uninterrupted_repeat_length < repeat_length, "Yes", "No"))
 
   return(df)
+  }
 }

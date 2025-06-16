@@ -8,7 +8,6 @@ Description: Estimating tandem repeat copy numbers in sequencing data via Levens
 License: MIT
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Depends: 
     microseq,
     purrr
-RoxygenNote: 7.3.2
