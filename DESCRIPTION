@@ -1,11 +1,11 @@
-Package: Lev-STR
+Package: LevSTR
 Type: Package
 Title: Estimating tandem repeat copy numbers in sequencing data via Levenshtein distance metrics
 Version: 0.1.0
 Author: Andrew Jiang
 Maintainer: The package maintainer <ajiang8@mgh.harvard.edu>
 Description: Estimating tandem repeat copy numbers in sequencing data via Levenshtein distance metrics
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
