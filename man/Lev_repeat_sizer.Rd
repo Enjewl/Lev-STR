@@ -5,7 +5,7 @@
 \title{Tandem repeat estimator from sequence data using Lev distances}
 \usage{
 Lev_repeat_sizer(
-  fastq,
+  fastq = NULL,
   left_flank_seq = "CAAGTCCTTC",
   right_flank_seq = "CAACAGCCGCCACCG",
   repeat_unit_seq = "CAG",
@@ -39,5 +39,5 @@ Dataframe containing useful data including the matched sequence, estimated numbe
 Estimating tandem repeat copy numbers in sequencing data via Levenshtein distance metrics
 }
 \examples{
-Matched_sequence_df <- repeat_sizer("Example.fastq")
+Matched_sequence_df <- repeat_sizer("R/Example.fastq")
 }

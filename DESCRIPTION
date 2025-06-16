@@ -11,3 +11,4 @@ LazyData: true
 Depends: 
     microseq,
     purrr
+RoxygenNote: 7.3.2
